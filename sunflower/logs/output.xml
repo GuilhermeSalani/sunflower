@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220826 11:31:20.427" rpa="false" schemaversion="3">
+<suite id="s1" name="sunflowerTests" source="C:\Users\Usuario\Desktop\Teste\sunflower\tests\sunflowerTests.robot">
+<test id="s1-t1" name="Validar que o Jardim esta vazio" line="8">
+<kw name="Iniciar App" library="sunflowerBase" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220826 11:31:20.585" endtime="20220826 11:31:20.585"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulador</arg>
+<arg>app=C:/Users/Usuario/Desktop/Teste/sunflower.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220826 11:31:20.585" endtime="20220826 11:31:29.530"/>
+</kw>
+<status status="PASS" starttime="20220826 11:31:20.585" endtime="20220826 11:31:29.530"/>
+</kw>
+<kw name="Dado que inicio o APP" library="sunflowerSteps">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20220826 11:31:29.531" endtime="20220826 11:31:29.531"/>
+</kw>
+<status status="PASS" starttime="20220826 11:31:29.531" endtime="20220826 11:31:29.531"/>
+</kw>
+<kw name="Quando Add Plant esta presente na tela" library="sunflowerSteps">
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${ADD_PLANT}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20220826 11:31:30.064" level="INFO">Current page contains text 'ADD PLANT'.</msg>
+<status status="PASS" starttime="20220826 11:31:29.531" endtime="20220826 11:31:30.064"/>
+</kw>
+<status status="PASS" starttime="20220826 11:31:29.531" endtime="20220826 11:31:30.064"/>
+</kw>
+<kw name="Entao valido que meu jardim esta vazio" library="sunflowerSteps">
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${JARDIM_VAZIO}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20220826 11:31:30.157" level="INFO">Current page contains text 'Your garden is empty'.</msg>
+<status status="PASS" starttime="20220826 11:31:30.065" endtime="20220826 11:31:30.157"/>
+</kw>
+<status status="PASS" starttime="20220826 11:31:30.065" endtime="20220826 11:31:30.157"/>
+</kw>
+<kw name="Fechar App" library="sunflowerBase" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220826 11:31:30.158" endtime="20220826 11:31:30.523"/>
+</kw>
+<status status="PASS" starttime="20220826 11:31:30.158" endtime="20220826 11:31:30.523"/>
+</kw>
+<status status="PASS" starttime="20220826 11:31:20.584" endtime="20220826 11:31:30.523"/>
+</test>
+<test id="s1-t2" name="Deve realizar uma plantacao" line="13">
+<kw name="Iniciar App" library="sunflowerBase" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220826 11:31:30.525" endtime="20220826 11:31:30.525"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulador</arg>
+<arg>app=C:/Users/Usuario/Desktop/Teste/sunflower.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220826 11:31:30.525" endtime="20220826 11:31:38.252"/>
+</kw>
+<status status="PASS" starttime="20220826 11:31:30.525" endtime="20220826 11:31:38.253"/>
+</kw>
+<kw name="Dado que seleciono ADD Plant" library="sunflowerSteps">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${ADD_PLANT}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220826 11:31:38.253" endtime="20220826 11:31:38.780"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${ADD_PLANT}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220826 11:31:38.780" endtime="20220826 11:31:39.226"/>
+</kw>
+<status status="PASS" starttime="20220826 11:31:38.253" endtime="20220826 11:31:39.226"/>
+</kw>
+<kw name="E seleciono uma planta" library="sunflowerSteps">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${MACA}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220826 11:31:39.227" endtime="20220826 11:31:40.210"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${MACA}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220826 11:31:40.211" endtime="20220826 11:31:40.324"/>
+</kw>
+<status status="PASS" starttime="20220826 11:31:39.226" endtime="20220826 11:31:40.325"/>
+</kw>
+<kw name="Quando clico em incluir" library="sunflowerSteps">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${INCLUIR_FRUTA}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220826 11:31:40.326" level="INFO">Clicking element 'id=com.google.samples.apps.sunflower:id/fab'.</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220826 11:31:40.627" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220826 11:31:40.429" endtime="20220826 11:31:40.628"/>
+</kw>
+<msg timestamp="20220826 11:31:40.628" level="FAIL">ValueError: Element locator 'id=com.google.samples.apps.sunflower:id/fab' did not match any elements.</msg>
+<status status="FAIL" starttime="20220826 11:31:40.325" endtime="20220826 11:31:40.629"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${TextoDaFruta}</var>
+<arg>${MACA}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<status status="NOT RUN" starttime="20220826 11:31:40.629" endtime="20220826 11:31:40.629"/>
+</kw>
+<status status="FAIL" starttime="20220826 11:31:40.325" endtime="20220826 11:31:40.630"/>
+</kw>
+<kw name="Entao valido que a mesma foi plantada" library="sunflowerSteps">
+<status status="NOT RUN" starttime="20220826 11:31:40.630" endtime="20220826 11:31:40.630"/>
+</kw>
+<kw name="Fechar App" library="sunflowerBase" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220826 11:31:40.631" endtime="20220826 11:31:40.864"/>
+</kw>
+<status status="PASS" starttime="20220826 11:31:40.631" endtime="20220826 11:31:40.864"/>
+</kw>
+<status status="FAIL" starttime="20220826 11:31:30.524" endtime="20220826 11:31:40.864">ValueError: Element locator 'id=com.google.samples.apps.sunflower:id/fab' did not match any elements.</status>
+</test>
+<status status="FAIL" starttime="20220826 11:31:20.429" endtime="20220826 11:31:40.866"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="sunflowerTests">sunflowerTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
